@@ -7,6 +7,16 @@
     <title>Document</title>
 </head>
 <body>
-    dsds <input type="button" value='add' name='add_contact'>
+    {% for contact in contacts %}
+        <li style="border-color: black;background-color: aquamarine;">Username: <p><b>{{contact.username}}</b></p> 
+            Phone Nimber: +998{{contact.number}}
+            <a href="{%url 'update_form' contact.id%}"><button>Update</button></a>
+            <a href="{%url 'delete_contact' contact.id%}"><button>Delete</button></a>
+            <br>
+        </li>
+        <br>
+    {% endfor %}
+
+    <a href="{%url 'add_contact'%}"><button>Add</button></a>
 </body>
 </html>

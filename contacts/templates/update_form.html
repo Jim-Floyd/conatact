@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action={% url 'update_contact' contact.id %} method='POST'>
+        {%csrf_token%}
+        <input type="text" name="username" id="" placeholder="Enter Username" value="{{contact.username}}">
+        +998<input type="text" name="phone_number" id="" placeholder="Enter phone number" value="{{contact.number}}">
+        <input type="submit" name="" id="" value="Update">
+    </form>
+</body>
+</html>

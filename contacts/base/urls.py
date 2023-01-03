@@ -8,5 +8,6 @@ urlpatterns = [
     path('update_contact/<str:pk>',
          views.update_contact, name='update_contact'),
     path('delete_contact/<str:pk>', views.delete_contact, name='delete_contact'),
-    path('pagination/<int:pk>', views.pagination, name='pagination'),
+    path('search_contact', views.search_contact, name='search_contact'),
+    # path('pagination/<int:pk>', views.pagination, name='pagination'),
 ]

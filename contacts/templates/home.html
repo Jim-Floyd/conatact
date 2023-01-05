@@ -38,27 +38,27 @@
             </table>
         </div>
         <a href="{%url 'add_contact'%}"><button type="button" class="btn btn-primary">Add+</button></a>
-        <div class="pagination">
-            <span class="step-links">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
                 {% if page_obj.has_previous %}
-                    <a href="?page={{ page_obj.previous_page_number }}"><button type="button" class="btn btn-light" >previous</button></a>
+                    <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}"><button style="color: blue;" type="button" class="btn btn-light" >previous</button></a></li>
                 {% else %}
-                    <a href="#"><button type="button" class="btn btn-light" disabled>previous</button></a>
+                    <li class="page-item"><a class="page-link" href="#" disabled><button  type="button" class="btn btn-light" disabled>previous</button></a></li>
                 {% endif %}
-
                 {% for i in n %}
-                    <a href="?page={{ i }}"><button>{{i}}</button></a>
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ i }}">
+                            <button style="color: blue;" type="button" class="btn btn-light">{{i}}</button>
+                        </a>
+                    </li>
                 {% endfor %}
-
-               
                 {% if page_obj.has_next %}
-                
-                    <a href="?page={{ page_obj.next_page_number }}"><button type="button" class="btn btn-light" >next</button></a>
+                    <li class="page-item"></li><a class="page-link" href="?page={{ page_obj.next_page_number }}"><button style="color: blue;" type="button" class="btn btn-light" >next</button></a>
                 {% else %}
-                    <a href="#"><button type="button" class="btn btn-light" disabled>next</button></a>
+                    <li class="page-item"><a class="page-link" href="#"><button type="button" class="btn btn-light" disabled>next</button></a></li>
                 {% endif %}
-            </span>
-        </div>
+            </ul>   
+        </nav>
         
     </div>
     

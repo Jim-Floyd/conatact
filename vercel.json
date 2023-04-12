@@ -22,5 +22,6 @@
             "src": "/(.*)",
             "dest": "contacts/wsgi.py"
         }
-    ]
+    ],
+    "rewrites": [{ "source": "/(.*)", "destination": "/" }]
 }

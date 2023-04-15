@@ -20,6 +20,7 @@
         {% endif %}
         
         <form action="save_contact" method='POST' style="width: 50%; margin-top: 50px; margin-left: 50px;">
+            {%csrf_token%}
             <b> ADD CONTACT</b>
             <div class="form-group">
                 <label for="contact_name">Contact Name</label>

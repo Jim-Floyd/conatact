@@ -1,5 +1,5 @@
 from django.http import HttpResponse
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, render_to_response
 from .models import Contact
 from .form import ContactForm
 from django.contrib import messages
@@ -107,3 +107,7 @@ def search_contact(request):
         searched = request.POST['searched']
         searched_contacts = Contact.objects.filter(username__contains=searched)
         return render(request, 'searched.html', {'searched_contacts': searched_contacts})
+
+def csrf_failure(request, reason=""):
+    ctx = {'message': 'some custom messages'}
+    return render_to_response('update_form.html', ctx)

@@ -127,3 +127,4 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CSRF_TRUSTED_ORIGINS = ['https://contactmanager-production-d505.up.railway.app/','https://*.127.0.0.1']
+CSRF_FAILURE_VIEW = 'contacts.views.csrf_failure'

@@ -1,5 +1,5 @@
 from django.http import HttpResponse
-from django.shortcuts import render, redirect,
+from django.shortcuts import render, redirect
 from .models import Contact
 from .form import ContactForm
 from django.contrib import messages

@@ -110,4 +110,4 @@ def search_contact(request):
 
 def csrf_failure(request, reason=""):
     ctx = {'message': 'some custom messages'}
-    return render(request, 'update_form.html', {'ctx': ctx})
+    return render(request, 'contacts', {'ctx': ctx})

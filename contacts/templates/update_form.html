@@ -19,7 +19,7 @@
                     </ul>
                 </div>
             {% endif %}
-            <form action={% url 'update_contact' contact.id %} method='POST' style="width: 50%; margin-top: 50px; margin-left: 50px;">
+            <form action="{% url 'update_contact' contact.id %}" method='POST' style="width: 50%; margin-top: 50px; margin-left: 50px;">
                 {%csrf_token%}
                 <b> UPDATE CONTACT</b>
                 <div class="form-group">
